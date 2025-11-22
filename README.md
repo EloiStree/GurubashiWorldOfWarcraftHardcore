@@ -25,6 +25,7 @@ The aim is to teach offline as LAN server with a classroom.
 Sometime time open the port to test around it.   
 
 **Main focus of the workshop:**
+- Learn how to code from variable to a moving champion.
 - Learn to move and rotate in a MMo
 - Learn to make code that can live their own life
 
