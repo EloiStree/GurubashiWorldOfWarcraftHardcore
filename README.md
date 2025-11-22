@@ -17,13 +17,10 @@ Feel free to contact me. I am poor, but I don’t mind eating pasta for a month 
 
 **Rules:**   
 - PVP Free for all enable anywhere.
-- Human player allowed 😋
+- Human player allowed 😋(server to learn code... So 90%+ are bots)
 - Xp Level are 800%
 - No cheat and bug abuse allowed
-- Hardcore server
-  - All gear on your when death are deleted of the server
-  - All gold not in bank or bank guild are lost when you die
-- Guild bank are flush every week to zero 
+- Hardcore server 
 
 ## Dream-Freature: King Guild system
 
