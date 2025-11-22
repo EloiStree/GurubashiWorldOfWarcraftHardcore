@@ -13,3 +13,27 @@ If you know how to setup this kind of server, contact me.
   
 You are on Fiverr and want to help me with this code tournament server.   
 Feel free to contact me. I am poor, but I don’t mind eating pasta for a month if it can bring this server alive.  
+
+
+Rules: 
+- PVP Free for all enable anywhere.
+- Human player allowed 😋
+- Xp Level are 800%
+- Cheat are ban
+- Hardcore server
+  - All gear on your when death are deleted of the server
+  - All gold not in bank or bank guild are lost when you die
+- Guild bank are flush every week to zero 
+
+## Dream-Freature: King Guild system
+
+For every guild on the server there is a permanent player.
+- If the king die -> Guild is deleted
+- If the king is unconnected for more that 5 minutes -> Guild is deleted
+- If the king is diconnect to avoid combat -> GM delete the guild.
+- If a king enter a donjour -> Guild is deleted
+- When a king die all the guild item are transfert by mail to the player killing him.
+
+Basically this feature is there to have fun.
+
+
