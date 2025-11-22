@@ -15,11 +15,11 @@ You are on Fiverr and want to help me with this code tournament server.
 Feel free to contact me. I am poor, but I don’t mind eating pasta for a month if it can bring this server alive.  
 
 
-Rules: 
+**Rules:**   
 - PVP Free for all enable anywhere.
 - Human player allowed 😋
 - Xp Level are 800%
-- Cheat are ban
+- No cheat and bug abuse allowed
 - Hardcore server
   - All gear on your when death are deleted of the server
   - All gold not in bank or bank guild are lost when you die
