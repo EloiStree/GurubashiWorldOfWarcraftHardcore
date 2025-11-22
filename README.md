@@ -10,3 +10,6 @@ I just want to make coding fun by combining it with World of Warcraft.
 The envisioned server would be a **free-for-all PvP world with hardcore rules**—you level up, you explore, you fight, but any encounter could end permanently if you die.
 
 If you know how to setup this kind of server, contact me.   
+  
+You are on Fiverr and want to help me with this code tournament server.   
+Feel free to contact me. I am poor, but I don’t mind eating pasta for a month if it can bring this server alive.  
