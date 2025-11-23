@@ -24,19 +24,21 @@
 
 
 ---
-
 ### **Why be here:**
 
-* If you are here to learn what a `loop` and a `list` are, you are in the right place.
-* If you are here to fight as a human against code and AI in mini-challenge tournaments, you are in the right place.
+* If you’re here to learn what a `loop` and a `list` are, you’re in the right place.
+* If you want to battle as a human against code and AI in mini-challenge tournaments, you’re in the right place.
+* If you want to learn how to create a home server and practice coding by fighting your friends in LAN PvP, you’re in the right place.
 
 ---
 
-> Don't get attached to your champion. Craft your gear; you are here for war.
+> Don't get attached to your champion. Craft your gear; you are here for the war.
 
 ---
 
 # Gurubashi World of Warcraft Hardcore
+
+[<img width="979" height="223" alt="image" src="https://github.com/user-attachments/assets/15d13516-9619-467d-8d0b-06d5c7b159c1" />](https://wowpedia.fandom.com/wiki/Gurubashi_Arena)
 
 **GWWH** is a concept for a custom server where coders can learn programming by playing in a free-for-all hardcore PVP World of Warcraft environment.
 
@@ -47,6 +49,10 @@ I just want to experiment a World of **War**-**Craft**.
 The envisioned server is **free-for-all PvP world with hardcore rules**:  
 you level up, you explore, you fight, then you die. Repeat.  
 _The aim is to be short session to learn fast but also can become big sesions when you need to preserve your life._
+
+
+My hope is that if this initiative ever comes to an end, it will be because it is made official, not removed.  
+The concept is simple and fun.  
 
 **Rules:**   
 - PVP Free for all enable anywhere.
