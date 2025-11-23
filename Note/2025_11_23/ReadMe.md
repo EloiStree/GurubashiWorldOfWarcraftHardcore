@@ -156,12 +156,21 @@ sudo ufw to open port
 sudo ufw  3724
 
 
+Check that the port ar open
+
+tmux attach-session
+server re 1
 
 
 
 
 
+if on proximus change the worldserver.config 
+to sue your modem operator.
 
+we used
+3700 instead of 8085
+3724
 
 
 
