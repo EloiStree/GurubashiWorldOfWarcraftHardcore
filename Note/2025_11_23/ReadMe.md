@@ -56,6 +56,7 @@ https://cmake.org/ is a C++ tool on Linux
 `sudo make install`
 
 
+`/server_files/server_source/build`
 
 
 
