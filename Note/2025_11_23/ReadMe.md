@@ -109,7 +109,8 @@ worldserver/config
 DataDir = "/jome_server files core files data something"   
 LogsDir = "path of logs file"  
 
-
+lua_script/extensions
+- 
 
 
 
