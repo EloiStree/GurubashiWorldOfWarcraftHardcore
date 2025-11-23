@@ -32,3 +32,5 @@ https://github.com/azerothcore/azerothcore-wotlk
 ```
 sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch /home/server_files/
 ```
+
+
