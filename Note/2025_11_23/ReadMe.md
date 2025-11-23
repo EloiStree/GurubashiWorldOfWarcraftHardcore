@@ -25,6 +25,8 @@ Keyword:
 `CMake`
 `mysql.conf.d`
 `mysql_secure_installation`
+`ls -l` `pwd`
+`mv /Server_files/* /home/gurubashiaccount/server_files/`
 
 https://github.com/azerothcore/azerothcore-wotlk
 ```
