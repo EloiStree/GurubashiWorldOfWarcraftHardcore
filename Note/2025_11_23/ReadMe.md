@@ -10,14 +10,15 @@ https://store.steampowered.com/sale/steammachine
 
 
 
-Port to open on network:
-3306
-8085
-3724
+
+```
+http://192.168.1.1/
+```
+Go to admin panel and open port:
+Port to open on network: 3306 8085 3724
 
 <img width="1837" height="159" alt="image" src="https://github.com/user-attachments/assets/30292e6d-0af4-4c01-9744-731ccf7aee5f" />
 
-81.240.94.97
 
 
 Keyword:
@@ -29,6 +30,7 @@ Keyword:
 `mv /Server_files/* /home/gurubashiaccount/server_files/`
 `sudo rm  -r server_files/`
 `sudo mkdir server_files/`
+
 https://github.com/azerothcore/azerothcore-wotlk  
 ```
 sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch /home/server_files/
