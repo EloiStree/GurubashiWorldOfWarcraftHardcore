@@ -115,6 +115,18 @@ lua_script/extensions
 
 
 
+worldserver.conf
+GameType = 16
+
+Rate.XP.kill =8
+Rate.XP.Quest =8
+Rate.XP.Explore =8
+...
+
+
+
+
+
 
 
 
