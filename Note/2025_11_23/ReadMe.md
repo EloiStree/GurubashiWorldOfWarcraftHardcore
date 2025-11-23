@@ -124,6 +124,38 @@ Rate.XP.Explore =8
 ...
 
 
+sudo sudo apt update
+
+```sudo apt install nodejs```
+```sudo apt install npm```
+
+```sudo npm install pm -g```
+```sudo apt install tmux```
+
+./authserver
+tmux new -s 
+```sudo ./worldserver```
+
+
+AC . account create admin 1134566
+set admin to 3
+
+go int data base and do something on it. account_access
+
+ral
+
+
+!!! change realmlist as name and public address in deb heidisql
+
+
+use portchecker.com    
+to check that port are open   
+
+ufw status
+sudo ufw to open port
+sudo ufw  3724
+
+
 
 
 
