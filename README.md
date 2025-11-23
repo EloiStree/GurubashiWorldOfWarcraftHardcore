@@ -1,3 +1,8 @@
+
+# Gurubashi World of Warcraft Hardcore
+
+[<img width="979" height="223" alt="image" src="https://github.com/user-attachments/assets/15d13516-9619-467d-8d0b-06d5c7b159c1" />](https://wowpedia.fandom.com/wiki/Gurubashi_Arena)
+
 > **Warning 1:** Private servers are against the World of Warcraft Terms of Service.
 > You should have an active monthly subscription to the official game to participate in this server mode.
 > This is not, and should not be, a substitute for the official release.
@@ -35,10 +40,6 @@
 > Don't get attached to your champion. Craft your gear; you are here for the war.
 
 ---
-
-# Gurubashi World of Warcraft Hardcore
-
-[<img width="979" height="223" alt="image" src="https://github.com/user-attachments/assets/15d13516-9619-467d-8d0b-06d5c7b159c1" />](https://wowpedia.fandom.com/wiki/Gurubashi_Arena)
 
 **GWWH** is a concept for a custom server where coders can learn programming by playing in a free-for-all hardcore PVP World of Warcraft environment.
 
