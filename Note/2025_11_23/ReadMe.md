@@ -27,10 +27,39 @@ Keyword:
 `mysql_secure_installation`
 `ls -l` `pwd`
 `mv /Server_files/* /home/gurubashiaccount/server_files/`
-
-https://github.com/azerothcore/azerothcore-wotlk
+`sudo rm  -r server_files/`
+`sudo mkdir server_files/`
+https://github.com/azerothcore/azerothcore-wotlk  
 ```
 sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch /home/server_files/
 ```
+
+```
+cd modules/
+cd ..
+mkdir build && cd build
+```
+
+
+https://github.com/azerothcore/mod-ale  
+```
+sudo git clone https://github.com/azerothcore/mod-ale.git
+```
+Need:
+- `AzerothCore server installation`
+- `Git version control system`
+- `CMake build system`
+
+https://cmake.org/ is a C++ tool on Linux   
+
+
+`sudo make install`
+
+
+
+
+
+
+
 
 
