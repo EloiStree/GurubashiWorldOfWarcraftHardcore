@@ -17,3 +17,16 @@ Port to open on network:
 
 <img width="1837" height="159" alt="image" src="https://github.com/user-attachments/assets/30292e6d-0af4-4c01-9744-731ccf7aee5f" />
 
+81.240.94.97
+
+
+Keyword:
+`sudo -i`
+`CMake`
+`mysql.conf.d`
+`mysql_secure_installation`
+
+https://github.com/azerothcore/azerothcore-wotlk
+```
+sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch /home/server_files/
+```
