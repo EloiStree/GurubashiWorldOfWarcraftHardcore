@@ -62,7 +62,8 @@ https://cmake.org/ is a C++ tool on Linux
 
 
 Client: https://www.warmane.com/download
-
+Download Warth of Lich King:
+https://www.bittorrent.com/downloads/complete/classic
 
 
 
