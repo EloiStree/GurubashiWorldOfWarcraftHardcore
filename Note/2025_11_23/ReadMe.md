@@ -67,6 +67,50 @@ https://www.bittorrent.com/downloads/complete/classic
 
 
 
+cp authserver.config.dist
+and others
+
+
+[heidisql](https://www.heidisql.com/download.php)  
+https://www.heidisql.com/download.php    
+Git https://github.com/HeidiSQL/HeidiSQL  
+https://github.com/HeidiSQL/HeidiSQL/releases/tag/v12.13.0.7147  
+
+  
+```sudo dpkg --add-architecture i386```
+```sudo apt update```
+
+
+sudo apt install unzip
+
+unzip KeidiSal...
+wine heidisql.exe
+
+
+new session name 
+
+sudo  -i 
+mysql
+
+crestion session name server_localhost in keidasal
+
+
+FLUSH PRIVILEGES
+
+
+create user_admin with password
+
+systemctl status mysql
+
+
+
+
+
+
+
+
+
+
 
 
 
