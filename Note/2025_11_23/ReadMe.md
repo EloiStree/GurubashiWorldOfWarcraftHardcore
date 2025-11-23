@@ -184,6 +184,15 @@ we used
 
 
 
+.reload ale
+
+sudo pm2 start worldserver
+
+
+
+
+
+
 
 
 
