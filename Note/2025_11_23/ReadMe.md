@@ -161,6 +161,14 @@ Check that the port ar open
 tmux attach-session
 server re 1
 
+```
+account create amroyasir test@noame
+account crated
+```
+
+
+
+
 
 
 
