@@ -15,3 +15,5 @@ Port to open on network:
 8085
 3724
 
+<img width="1837" height="159" alt="image" src="https://github.com/user-attachments/assets/30292e6d-0af4-4c01-9744-731ccf7aee5f" />
+
