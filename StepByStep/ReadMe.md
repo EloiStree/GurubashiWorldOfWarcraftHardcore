@@ -56,6 +56,29 @@ Before I do that, I writing down the step and vocabulary to learn.
 
 # Rewatch of the replay
 
-Todo
+Log as a user.
+```
+sudo -i
+```
+
+```
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
+```
+
+
+```
+mysql_secure_installatiin
+```
+
+
+```
+cmake ../ -DCMAKE_INSTALL_PREFIX=/home/gurubashiaccount/server_files/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
+```
+
+
+
+
+
+
 
 
