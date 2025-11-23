@@ -110,7 +110,10 @@ DataDir = "/jome_server files core files data something"
 LogsDir = "path of logs file"  
 
 lua_script/extensions
-- 
+- Download HardCore.lua and drop it in lua_scripts of core_filesbin
+
+
+
 
 
 
