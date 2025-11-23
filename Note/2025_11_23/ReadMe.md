@@ -61,6 +61,9 @@ https://cmake.org/ is a C++ tool on Linux
 `/server_files/server_source/build`
 
 
+Client: https://www.warmane.com/download
+
+
 
 
 
