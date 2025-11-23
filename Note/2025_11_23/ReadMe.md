@@ -103,6 +103,8 @@ create user_admin with password
 systemctl status mysql
 
 
+unwip data downloaded with wget.
+
 
 
 
