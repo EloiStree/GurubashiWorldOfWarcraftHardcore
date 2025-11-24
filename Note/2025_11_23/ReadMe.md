@@ -240,7 +240,7 @@ nano /etc/mysql/mysql.conf.d/mysqld.cnf
 systemctl restart mysql
  
 wine heidisql/heidisql.exe
-
+ 
 
 rm -r Data.zip 
 
