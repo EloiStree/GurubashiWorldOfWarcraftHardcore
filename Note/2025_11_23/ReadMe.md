@@ -191,6 +191,7 @@ sudo pm2 start worldserver
 
 
 ```
+echo "Can be done without thinking"
 sudo apt update
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 
@@ -204,22 +205,42 @@ sudo apt install wine64 wine32
 sudo apt install net-tools
 wget https://github.com/wowgaming/client-data/releases/download/v18.0/Data.zip
 wget https://github.com/HeidiSQL/HeidiSQL/releases/download/v12.13.0.7147/HeidiSQL_12.13_64_Portable.zip
-sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git server_files/
-sudo git clone https://github.com/azerothcore/mod-ale.git server_files/modules/
+
+sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git server_files
+sudo git clone https://github.com/azerothcore/mod-ale.git server_files_modules/
+sudo cp -r server_files_modules/ server_files/modules/
+sudo rm -rf server_files_modules/
 
 unzip HeidiSQL_12.13_64_Portable.zip -d heidisql
-wine heidisql.exe
+unzip Data.zip -d WowData
 
-ip addr show
-single-branch /home/server_files/
-ls -l
-cd server_files/
-pwd
 
-sudo mv /home/server_files/ /home/gurubashiaccount/server_files/
-sudo rm -r server_files/
-cd modules/
+
+mkdir server_files/modules/build
+
+
+
+echo "Now we nee to take attention"
+mysql_secure_installation
+echo "Yes Yes Yes"
+echo "It install the following"
+clang --version
+cmake --version
+openssl version
+
+nano /etc/mysql/mysql.conf.d/mysqld.cnf
+systemctl restart mysql
+ 
+wine heidisql/heidisql.exe
+
+
+rm -r Data.zip 
+
+
+
+cd module/
 mkdir build && cd build
+
 nproc --all
 make -j 8
 sudo make install
@@ -227,9 +248,6 @@ cp authserver.conf.dist authserver.conf
 cp worldserver.conf.dist worldserver.conf
 
 mysql
-unzip Data.zip 
-
-rm -r Data.zip 
 tmux new -s auth
 tmux new -s world
 tmux attach-session -t auth
