@@ -191,10 +191,9 @@ sudo pm2 start worldserver
 
 
 ```
-gurubashiaccount@GurubashiComputer:~$ sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
-
-
 sudo apt update
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
+
 sudo -i
 sudo apt install nodejs
 sudo apt install npm
@@ -207,7 +206,7 @@ sudo apt install wine64 wine32
 sudo apt install net-tools
 wget https://github.com/wowgaming/client-data/releases/download/v18.0/Data.zip
 
-
+wget https://github.com/HeidiSQL/HeidiSQL/releases/download/v12.13.0.7147/HeidiSQL_12.13_64_Portable.zip
 unzip HeidiSQL_12.13_64_Portable.zip -d heidisql
 wine heidisql.exe
 
