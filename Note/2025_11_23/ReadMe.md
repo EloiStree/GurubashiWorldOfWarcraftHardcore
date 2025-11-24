@@ -192,33 +192,40 @@ sudo pm2 start worldserver
 
 ```
 echo "Can be done without thinking"
-sudo apt update
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
+sudo apt update -y && sudo apt upgrade -y
+sudo apt install -y git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev nodejs npm tmux net-tools wine64 wine32
 
 sudo -i
-sudo apt install nodejs
-sudo apt install npm
 sudo npm install pm2 -g
-sudo apt install tmux
 sudo dpkg --add-architecture i386
-sudo apt install wine64 wine32
-sudo apt install net-tools
 wget https://github.com/wowgaming/client-data/releases/download/v18.0/Data.zip
 wget https://github.com/HeidiSQL/HeidiSQL/releases/download/v12.13.0.7147/HeidiSQL_12.13_64_Portable.zip
-
-sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git server_files
-sudo git clone https://github.com/azerothcore/mod-ale.git server_files_modules/
-sudo cp -r server_files_modules/ server_files/modules/
-sudo rm -rf server_files_modules/
-
-unzip HeidiSQL_12.13_64_Portable.zip -d heidisql
-unzip Data.zip -d WowData
+unzip -o HeidiSQL_12.13_64_Portable.zip -d heidisql
+unzip -o Data.zip -d WowData
 
 
-mkdir server_files/modules/build
-sudo cmake server_files/ -DCMAKE_INSTALL_PREFIX=server_files/modules/build/core_files 
-DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ 
-DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static 
+# Clone AzerothCore source
+sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git \
+    --branch master --single-branch server_files/source_code
+
+# Clone module mod-ale
+sudo git clone https://github.com/azerothcore/mod-ale.git server_files/source_modules
+
+# Reset build and modules folder
+sudo rm -rf server_files/build
+sudo rm -rf server_files/source_code/modules
+sudo mkdir -p server_files/source_code/modules
+sudo mkdir -p server_files/build
+
+# Copy modules to AC source
+sudo cp -rpf server_files/source_modules/* server_files/source_code/modules/
+
+cd ~/server_files/build
+sudo cmake ../source_code -DCMAKE_INSTALL_PREFIX=server_files/build/core_files -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
+
+sudo make -C ~/server_files/build -j"$(nproc --all)"
+
+
 
 
 echo "Now we nee to take attention"
