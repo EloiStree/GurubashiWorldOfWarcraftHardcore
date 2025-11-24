@@ -202,8 +202,6 @@ wget https://github.com/wowgaming/client-data/releases/download/v18.0/Data.zip
 wget https://github.com/HeidiSQL/HeidiSQL/releases/download/v12.13.0.7147/HeidiSQL_12.13_64_Portable.zip
 unzip -o HeidiSQL_12.13_64_Portable.zip -d heidisql
 unzip -o Data.zip -d WowData
-
-
 # Clone AzerothCore source
 sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git \
     --branch master --single-branch server_files/source_code
@@ -211,19 +209,34 @@ sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git \
 # Clone module mod-ale
 sudo git clone https://github.com/azerothcore/mod-ale.git server_files/source_modules
 
+
+export AC_CODE_DIR="$HOME/server_files"
+
 # Reset build and modules folder
-sudo rm -rf server_files/build
-sudo rm -rf server_files/source_code/modules
-sudo mkdir -p server_files/source_code/modules
-sudo mkdir -p server_files/build
+sudo rm -rf "$AC_CODE_DIR/build"
+sudo rm -rf "$AC_CODE_DIR/source_code/modules"
+sudo mkdir -p "$AC_CODE_DIR/source_code/modules"
+sudo mkdir -p "$AC_CODE_DIR/build"
 
-# Copy modules to AC source
-sudo cp -rpf server_files/source_modules/* server_files/source_code/modules/
+# Create proper module directory
+sudo mkdir -p "$AC_CODE_DIR/source_code/modules/mod_ale"
 
-cd ~/server_files/build
-sudo cmake ../source_code -DCMAKE_INSTALL_PREFIX=server_files/build/core_files -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
+# Copy mod-ale content into the required module folder
+sudo cp -rpf "$AC_CODE_DIR/source_modules/"* "$AC_CODE_DIR/source_code/modules/"
 
-sudo make -C ~/server_files/build -j"$(nproc --all)"
+# Configure with CMake
+cd "$AC_CODE_DIR/build"
+sudo cmake ../source_code \
+  -DCMAKE_INSTALL_PREFIX="$AC_CODE_DIR/build/core_files" \
+  -DCMAKE_C_COMPILER=/usr/bin/clang \
+  -DCMAKE_CXX_COMPILER=/usr/bin/clang++ \
+  -DWITH_WARNINGS=1 \
+  -DTOOLS_BUILD=all \
+  -DSCRIPTS=static \
+  -DMODULES=static
+
+# Build using all CPU cores
+sudo make -j"$(nproc --all)"
 
 
 
