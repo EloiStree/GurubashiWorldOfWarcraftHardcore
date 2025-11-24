@@ -193,9 +193,26 @@ sudo pm2 start worldserver
 ```
 gurubashiaccount@GurubashiComputer:~$ sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 
+
+sudo apt update
 sudo -i
+sudo apt install nodejs
+sudo apt install npm
+sudo npm install pm2 -g
+sudo apt install tmux
+sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git server_files/
+sudo git clone https://github.com/azerothcore/mod-ale.git server_files/modules/
+sudo dpkg --add-architecture i386
+sudo apt install wine64 wine32
+sudo apt install net-tools
+wget https://github.com/wowgaming/client-data/releases/download/v18.0/Data.zip
+
+
+unzip HeidiSQL_12.13_64_Portable.zip -d heidisql
+wine heidisql.exe
+
 ip addr show
-sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch /home/server_files/
+single-branch /home/server_files/
 ls -l
 cd server_files/
 pwd
@@ -203,25 +220,17 @@ pwd
 sudo mv /home/server_files/ /home/gurubashiaccount/server_files/
 sudo rm -r server_files/
 cd modules/
-sudo git clone https://github.com/azerothcore/mod-ale.git
 mkdir build && cd build
 nproc --all
 make -j 8
 sudo make install
 cp authserver.conf.dist authserver.conf
 cp worldserver.conf.dist worldserver.conf
-sudo dpkg --add-architecture i386
-sudo apt update
-sudo apt install wine64 wine32
+
 mysql
-wget https://github.com/wowgaming/client-data/releases/download/v18.0/Data.zip
 unzip Data.zip 
 
 rm -r Data.zip 
-sudo apt install nodejs
-sudo apt install npm
-sudo npm install pm2 -g
-sudo apt install tmux
 tmux new -s auth
 tmux new -s world
 tmux attach-session -t auth
@@ -229,11 +238,8 @@ tmux attach-session -t world
 
 sudo ufw status
 
-sudo apt install net-tools
 ifconfig
 
-unzip HeidiSQL_12.13_64_Portable.zip -d heidisql
-wine heidisql.exe
 reboot
 hostname -I
 ./worldserver
