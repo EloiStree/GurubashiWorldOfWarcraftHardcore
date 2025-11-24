@@ -215,9 +215,8 @@ unzip HeidiSQL_12.13_64_Portable.zip -d heidisql
 unzip Data.zip -d WowData
 
 
-
 mkdir server_files/modules/build
-sudo cmake ../ -DCMAKE_INSTALL_PREFIX=$AC_CODE_DIR/core_files 
+sudo cmake server_files/ -DCMAKE_INSTALL_PREFIX=server_files/modules/build/core_files 
 DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ 
 DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static 
 
