@@ -265,6 +265,8 @@ echo "Now we nee to take attention"
 mysql_secure_installation
 echo "No Yes Yes Yes"
 
+sudo mysql -e "CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore'; GRANT ALL PRIVILEGES ON *.* TO 'acore'@'localhost' WITH GRANT OPTION; FLUSH PRIVILEGES;"
+
 echo "Remove comment on port=3306 if you need remote acces"
 echo "Open the bind-address to 0.0.0.0 for any access"
 nano /etc/mysql/mysql.conf.d/mysqld.cnf
