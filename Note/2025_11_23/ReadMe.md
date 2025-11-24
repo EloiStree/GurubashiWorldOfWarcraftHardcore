@@ -263,14 +263,24 @@ sudo cp -r "$HOME/server_files/zip/wow_data"* "$HOME/server_files/build/core_fil
 
 echo "Now we nee to take attention"
 mysql_secure_installation
-echo "No Yes Yes Yes"
-
+echo "No Yes Yes Yes Yes or yes yes yes yes "
+sudo mysql -e "UNINSTALL COMPONENT 'file://component_validate_password';"
 sudo mysql -e "CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore'; GRANT ALL PRIVILEGES ON *.* TO 'acore'@'localhost' WITH GRANT OPTION; FLUSH PRIVILEGES;"
 
+
+
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 echo "Remove comment on port=3306 if you need remote acces"
 echo "Open the bind-address to 0.0.0.0 for any access"
-nano /etc/mysql/mysql.conf.d/mysqld.cnf
-systemctl restart mysql
+sudo systemctl restart mysql
+sudo systemctl daemon-reload
+
+cd ~/server_files/build/core_files/bin
+tmux kill-session -t auth
+tmux new -s auth
+sudo ./authserver
+echo "accept the creation of the data base 'yes" 
+
 
 
 gnome-terminal -- bash -c "wine ~/heidisql/heidisql.exe; exec bash"
@@ -281,7 +291,10 @@ LogsDir = "~/server_files/build/core_files/logs"
 DataDir = "~/server_files/build/core_files/data"
 echo "~ may not work then full path, check later"
 echo "check that your port is open on device and on modem 3306 3724 3700 8085*"
-
+-- To make the game free for all
+GameType = 16
+StartPlayerMoney = 100000
+StartPlayerLevel = 80
 
 
 
