@@ -199,14 +199,14 @@ sudo apt install nodejs
 sudo apt install npm
 sudo npm install pm2 -g
 sudo apt install tmux
-sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git server_files/
-sudo git clone https://github.com/azerothcore/mod-ale.git server_files/modules/
 sudo dpkg --add-architecture i386
 sudo apt install wine64 wine32
 sudo apt install net-tools
 wget https://github.com/wowgaming/client-data/releases/download/v18.0/Data.zip
-
 wget https://github.com/HeidiSQL/HeidiSQL/releases/download/v12.13.0.7147/HeidiSQL_12.13_64_Portable.zip
+sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git server_files/
+sudo git clone https://github.com/azerothcore/mod-ale.git server_files/modules/
+
 unzip HeidiSQL_12.13_64_Portable.zip -d heidisql
 wine heidisql.exe
 
