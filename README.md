@@ -83,3 +83,10 @@ Country of the world need developers and I think this initative can help on that
 
 In the hope that this project helps the community and brings more people to the official game,
 Eloi
+
+
+
+-----------------
+------------------
+
+Reminder: [Wow Classic](https://youtu.be/BHu5fTna8V4?t=1049)  
