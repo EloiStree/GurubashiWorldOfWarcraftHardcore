@@ -341,3 +341,6 @@ https://chatgpt.com/share/6925032f-c0c4-800e-860a-6bd8d3a3dbdf
 Create a server Player telemetry export:
 https://chatgpt.com/share/69250824-cac8-800e-82ef-78ee41b7da96
 
+Version for Raspberry Pi 5 :
+https://github.com/EloiStree/GurubashiWorldOfWarcraftHardcore/tree/main/Note/2025_11_23/OnPI  
+
