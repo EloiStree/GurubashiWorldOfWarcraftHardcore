@@ -281,6 +281,7 @@ tmux new -s auth
 sudo ./authserver
 echo "accept the creation of the data base 'yes" 
 
+tmux new -s world
 
 
 gnome-terminal -- bash -c "wine ~/heidisql/heidisql.exe; exec bash"
@@ -296,26 +297,37 @@ GameType = 16
 StartPlayerMoney = 100000
 StartPlayerLevel = 80
 
+Copy this script in:   
+sudo nano "$HOME/server_files/build/core_files/bin/lua_scripts/HardCore.lua"  
+https://github.com/EloiStree/GurubashiWorldOfWarcraftHardcore/blob/main/StepByStep/HardCore.lua  
 
-
-mysql
-tmux new -s auth
-tmux new -s world
-tmux attach-session -t auth
-tmux attach-session -t world
 
 sudo ufw status
 
-ifconfig
+-- if you need to give full right
+sudo chmod -R 777 ~/server_files
+tmux new -s auth
+sudo ./authserver
+Ctrl + B then d
+tmux new -s world
+sudo ./worldserver
+Ctrl + B then d
 
-reboot
-hostname -I
-./worldserver
+tmux attach-session -t auth
+tmux attach-session -t world
+
+--  in ./worldserver
+.account create admin admin
+account set gmlevel admin 3 02
+
+sudo ufw status
 
 ```
 
 
+<img width="927" height="161" alt="image" src="https://github.com/user-attachments/assets/2c73bc43-21b2-418f-bb97-a6bdb3db9183" />
 
+<img width="1060" height="269" alt="image" src="https://github.com/user-attachments/assets/187e088a-f048-4b2a-a30a-a49ff1b13902" />
 
 
 
