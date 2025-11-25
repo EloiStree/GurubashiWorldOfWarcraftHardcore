@@ -1,3 +1,13 @@
+If you dont care of security and want to remove sudo password
+```
+sudo visudo
+sudo sudo -l
+```
+```
+wow5 ALL=(ALL) NOPASSWD:ALL
+awow ALL=(ALL) NOPASSWD:ALL
+```
+
 Draft of install on Linux device:  
 ```
 echo "Can be done without thinking"
