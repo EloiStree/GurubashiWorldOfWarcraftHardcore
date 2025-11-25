@@ -344,3 +344,5 @@ https://chatgpt.com/share/69250824-cac8-800e-82ef-78ee41b7da96
 Version for Raspberry Pi 5 :
 https://github.com/EloiStree/GurubashiWorldOfWarcraftHardcore/tree/main/Note/2025_11_23/OnPI  
 
+What config to have for 1000 player:
+https://chatgpt.com/share/69251547-93a8-800e-abcc-a97492410224  
