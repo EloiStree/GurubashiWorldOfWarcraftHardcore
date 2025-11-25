@@ -10,6 +10,11 @@ awow ALL=(ALL) NOPASSWD:ALL
 
 Draft of install on Linux device:  
 ```
+
+git config --global user.name "HelloWorld"
+git config --global user.mail "HelloWorld@gmail.com"
+
+
 echo "Can be done without thinking"
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev nodejs npm tmux net-tools wine64 wine32 unzip screen nano
