@@ -22,15 +22,14 @@ awow ALL=(ALL) NOPASSWD:ALL
 Draft of install on Linux device:  
 ```
 
-git config --global user.name "HelloWorld"
-git config --global user.mail "HelloWorld@gmail.com"
-
 
 echo "Can be done without thinking"
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev nodejs npm tmux net-tools wine64 wine32 unzip screen nano
 
-sudo -i
+git config --global user.name "HelloWorld"
+git config --global user.mail "HelloWorld@gmail.com"
+
 sudo npm install pm2 -g
 sudo dpkg --add-architecture i386
 wget https://github.com/wowgaming/client-data/releases/download/v18.0/Data.zip
@@ -51,8 +50,6 @@ sudo unzip -o "Data.zip" -d "$HOME/server_files/zip/wow_data"
 sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch "$HOME/server_files/git/source_code"
 sudo git clone https://github.com/azerothcore/mod-ale.git "$HOME/server_files/git/source_code_ale/"
 
-#!/bin/bash
-set -e  # Exit on any error
 # Instead of downloading every time I do a mistake in the script
 export AC_CODE_DIR="$HOME/server_files"
 sudo rm -rf "$AC_CODE_DIR/source_code"
@@ -66,6 +63,17 @@ sudo cp -r "$HOME/server_files/git/source_code_ale/." "$HOME/server_files/source
 
 # Navigate to build directory
 cd "$AC_CODE_DIR/build"
+
+# Run CMake with source directory specified
+sudo cmake "$AC_CODE_DIR/source_code" \
+  -DCMAKE_INSTALL_PREFIX="$AC_CODE_DIR/build/core_files" \
+  -DCMAKE_C_COMPILER=/usr/bin/clang \
+  -DCMAKE_CXX_COMPILER=/usr/bin/clang++ \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DWITH_WARNINGS=1 \
+  -DTOOLS_BUILD=all \
+  -DSCRIPTS=static \
+  -DMODULES=static
 
 # Run CMake with source directory specified
 sudo cmake "$AC_CODE_DIR/source_code" \
