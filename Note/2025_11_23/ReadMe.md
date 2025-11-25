@@ -329,12 +329,13 @@ sudo ufw status
 
 <img width="1060" height="269" alt="image" src="https://github.com/user-attachments/assets/187e088a-f048-4b2a-a30a-a49ff1b13902" />
 
+<img width="945" height="738" alt="image" src="https://github.com/user-attachments/assets/727f353d-7000-4dc1-afb3-a9203c25e595" />
+
 
 -----------
 
 
 Auto start the server when pc is on:  
 https://chatgpt.com/share/6925032f-c0c4-800e-860a-6bd8d3a3dbdf  
-
 
 
