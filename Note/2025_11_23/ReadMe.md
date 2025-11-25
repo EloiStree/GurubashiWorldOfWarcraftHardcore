@@ -338,4 +338,6 @@ sudo ufw status
 Auto start the server when pc is on:  
 https://chatgpt.com/share/6925032f-c0c4-800e-860a-6bd8d3a3dbdf  
 
+Create a server Player telemetry export:
+https://chatgpt.com/share/69250824-cac8-800e-82ef-78ee41b7da96
 
