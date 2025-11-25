@@ -1,3 +1,14 @@
+Disable Log In on the PC
+```
+sudo nano /etc/gdm3/custom.conf
+```
+```
+AutomaticLoginEnable = true
+AutomaticLogin = awow 
+```
+
+
+
 If you dont care of security and want to remove sudo password
 ```
 sudo visudo
