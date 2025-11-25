@@ -151,6 +151,10 @@ echo "tmux attach-session -t auth"
 echo "tmux attach-session -t world"
 ```
 
+Create some script that auto-launch the server at start:   
+https://github.com/EloiStree/2025_11_25_azeroth_bin_script  
+
+
 Create account
 ```
 --  in ./worldserver
