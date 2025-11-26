@@ -183,5 +183,33 @@ account set gmlevel admin 3 -1
 gnome-terminal -- bash -c "wine ~/server_files/zip/heidisql/heidisql.exe; exec bash"
 echo "acore acore as name and password"
 
+-- change realms ip name and port
+-- change level of admin to owner
+
+
+-- Set static local ip
+https://github.com/EloiStree/GurubashiWorldOfWarcraftHardcore/issues/11
+
+ip a
+sudo nano /etc/netplan/01-network-manager-all.yaml
+
+---- TO COPY
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    enp1s0:
+      dhcp4: false
+      addresses:
+        - 192.168.1.88/24
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 1.1.1.1
+
+sudo netplan apply
+ip a
+
 
 ```
