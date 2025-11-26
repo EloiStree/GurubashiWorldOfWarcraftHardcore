@@ -4,7 +4,7 @@ sudo nano /etc/gdm3/custom.conf
 ```
 ```
 AutomaticLoginEnable = true
-AutomaticLogin = awow 
+AutomaticLogin = gurubashi 
 ```
 
 
@@ -15,8 +15,7 @@ sudo visudo
 sudo sudo -l
 ```
 ```
-wow5 ALL=(ALL) NOPASSWD:ALL
-awow ALL=(ALL) NOPASSWD:ALL
+gurubashi ALL=(ALL) NOPASSWD:ALL
 ```
 
 Draft of install on Linux device:  
@@ -42,31 +41,34 @@ sudo mkdir -p "$HOME/server_files/zip/wow_data"
 sudo unzip -o "HeidiSQL_12.13_64_Portable.zip" -d "$HOME/server_files/zip/heidisql"
 sudo unzip -o "Data.zip" -d "$HOME/server_files/zip/wow_data"
 
-
-
-
-
-# Clone AzerothCore source
+sudo chmod -R 777 ~/server_files
 sudo git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch "$HOME/server_files/git/source_code"
 sudo git clone https://github.com/azerothcore/mod-ale.git "$HOME/server_files/git/source_code_ale/"
 
-# Instead of downloading every time I do a mistake in the script
+sudo chmod -R 777 ~/server_files
+
 export AC_CODE_DIR="$HOME/server_files"
 sudo rm -rf "$AC_CODE_DIR/source_code"
 sudo rm -rf "$AC_CODE_DIR/build"  # Clean build directory too
 sudo mkdir -p "$AC_CODE_DIR/source_code/modules"
 sudo mkdir -p "$AC_CODE_DIR/build"
 
-# Copy source files (use -r for recursive directory copy)
+
+# 1. Clean previous build artifacts
+cd "$HOME/server_files/source_code/build"
+sudo rm -rf *
+
+# 2. Copy source files (if needed)
 sudo cp -r "$HOME/server_files/git/source_code/." "$HOME/server_files/source_code/"
-sudo cp -r "$HOME/server_files/git/source_code_ale/." "$HOME/server_files/source_code/modules/"
+sudo cp -r "$HOME/server_files/git/source_code_ale/." "$HOME/server_files/source_code/modules/mod-ale"
 
-# Navigate to build directory
-cd "$AC_CODE_DIR/build"
+# 3. Set permissions before building
+sudo chmod -R 777 ~/server_files
 
-# Run CMake with source directory specified
-sudo cmake "$AC_CODE_DIR/source_code" \
-  -DCMAKE_INSTALL_PREFIX="$AC_CODE_DIR/build/core_files" \
+# 4. Run CMake configuration (this generates the missing headers)
+cd "$HOME/server_files/source_code/build"
+cmake "$HOME/server_files/source_code" \
+  -DCMAKE_INSTALL_PREFIX="$HOME/server_files/build/core_files" \
   -DCMAKE_C_COMPILER=/usr/bin/clang \
   -DCMAKE_CXX_COMPILER=/usr/bin/clang++ \
   -DCMAKE_BUILD_TYPE=Release \
@@ -75,24 +77,12 @@ sudo cmake "$AC_CODE_DIR/source_code" \
   -DSCRIPTS=static \
   -DMODULES=static
 
-# Run CMake with source directory specified
-sudo cmake "$AC_CODE_DIR/source_code" \
-  -DCMAKE_INSTALL_PREFIX="$AC_CODE_DIR/build/core_files" \
-  -DCMAKE_C_COMPILER=/usr/bin/clang \
-  -DCMAKE_CXX_COMPILER=/usr/bin/clang++ \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DWITH_WARNINGS=1 \
-  -DTOOLS_BUILD=all \
-  -DSCRIPTS=static \
-  -DMODULES=static
+# 5. Build
+make -j$(nproc --all)
 
-# Build the project
-sudo make -j"$(nproc --all)"
+# 6. Install
+make install
 
-# Install (optional but recommended)
-sudo make install
-
-echo "Build completed successfully!"
 
 sudo cp "$AC_CODE_DIR/build/core_files/etc/authserver.conf.dist" "$AC_CODE_DIR/build/core_files/etc/authserver.conf"
 sudo cp "$AC_CODE_DIR/build/core_files/etc/worldserver.conf.dist" "$AC_CODE_DIR/build/core_files/etc/worldserver.conf"
@@ -105,8 +95,8 @@ sudo cp -r "$HOME/server_files/zip/wow_data"* "$HOME/server_files/build/core_fil
 
 
 echo "Now we nee to take attention"
-mysql_secure_installation
-echo "No Yes Yes Yes Yes or yes yes yes yes "
+sudo mysql_secure_installation
+echo "No Yes Yes Yes Yes "
 sudo mysql -e "UNINSTALL COMPONENT 'file://component_validate_password';"
 sudo mysql -e "CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore'; GRANT ALL PRIVILEGES ON *.* TO 'acore'@'localhost' WITH GRANT OPTION; FLUSH PRIVILEGES;"
 
@@ -118,7 +108,8 @@ sudo systemctl restart mysql
 sudo systemctl daemon-reload
 
 
-gnome-terminal -- bash -c "wine ~/heidisql/heidisql.exe; exec bash"
+gnome-terminal -- bash -c "wine ~/server_files/zip/heidisql/heidisql.exe; exec bash"
+echo "acore acore as name and password"
 
 sudo nano "$HOME/server_files/build/core_files/etc/worldserver.conf"
 WorldServerPort = 3700
@@ -148,6 +139,7 @@ tmux kill-session -t auth
 tmux new -s auth
 sudo ./authserver
 
+cd ~/server_files/build/core_files/bin
 tmux kill-session -t world
 tmux new -s world
 sudo ./worldserver
@@ -160,7 +152,10 @@ echo "tmux attach-session -t world"
 ```
 
 Create some script that auto-launch the server at start:   
-https://github.com/EloiStree/2025_11_25_azeroth_bin_script  
+https://github.com/EloiStree/2025_11_25_azeroth_bin_script
+
+sudo git clone https://github.com/EloiStree/2025_11_25_azeroth_bin_script.git ~/server_files/build/core_files/bin/2025_11_25_azeroth_bin_script
+
 
 
 Create account
