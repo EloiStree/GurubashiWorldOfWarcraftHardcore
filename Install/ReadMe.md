@@ -90,7 +90,7 @@ sudo cp "$AC_CODE_DIR/build/core_files/etc/worldserver.conf.dist" "$AC_CODE_DIR/
 sudo mkdir "$HOME/server_files/build/core_files/logs"
 sudo mkdir "$HOME/server_files/build/core_files/data"
 
-sudo cp -r "$HOME/server_files/zip/wow_data"* "$HOME/server_files/build/core_files/data"
+sudo cp -r "$HOME/server_files/zip/wow_data/"* "$HOME/server_files/build/core_files/data/"
 
 
 
@@ -108,13 +108,10 @@ sudo systemctl restart mysql
 sudo systemctl daemon-reload
 
 
-gnome-terminal -- bash -c "wine ~/server_files/zip/heidisql/heidisql.exe; exec bash"
-echo "acore acore as name and password"
-
 sudo nano "$HOME/server_files/build/core_files/etc/worldserver.conf"
 WorldServerPort = 3700
-LogsDir = "~/server_files/build/core_files/logs"
-DataDir = "~/server_files/build/core_files/data"
+LogsDir = "/home/gurubashi/server_files/build/core_files/logs"
+DataDir = "/home/gurubashi/server_files/build/core_files/data"
 echo "~ may not work then full path, check later"
 echo "check that your port is open on device and on modem 3306 3724 3700 8085*"
 -- To make the game free for all
@@ -181,6 +178,10 @@ account set gmlevel admin 3 -1
 .account create student016 12345678
 
 
-sudo ufw status
+
+
+gnome-terminal -- bash -c "wine ~/server_files/zip/heidisql/heidisql.exe; exec bash"
+echo "acore acore as name and password"
+
 
 ```
