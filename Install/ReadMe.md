@@ -1,3 +1,7 @@
+Step by step tutorial in French.  
+User Youtube Audio AI or subtitle for other language:  
+Version Long: https://youtu.be/c82OrEq6iEs  
+
 Disable Log In on the PC
 ```
 sudo nano /etc/gdm3/custom.conf
