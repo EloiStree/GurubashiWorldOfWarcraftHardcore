@@ -104,6 +104,7 @@ sudo mysql -e "CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore'; GRANT ALL 
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 echo "Remove comment on port=3306 if you need remote acces"
 echo "Open the bind-address to 0.0.0.0 for any access"
+echo "ONLY IF YOU NEED OUT HOME ACCESS"
 sudo systemctl restart mysql
 sudo systemctl daemon-reload
 
