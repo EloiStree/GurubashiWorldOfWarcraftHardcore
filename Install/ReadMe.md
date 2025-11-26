@@ -211,5 +211,14 @@ network:
 sudo netplan apply
 ip a
 
+-- Go on a window pc
+Download a client
+https://www.warmane.com/download 
+https://www.bittorrent.com/downloads/complete/classic
+Change the Data/enUS/realmlist.wtf by
+-- If remote server  
+set realmlist YOUR_SERVER_IP
+-- If local server   
+set realmlist 192.168.1.88    
 
 ```
