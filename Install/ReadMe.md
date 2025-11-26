@@ -56,7 +56,7 @@ sudo mkdir -p "$AC_CODE_DIR/build"
 
 # 1. Clean previous build artifacts
 cd "$HOME/server_files/source_code/build"
-sudo rm -rf *
+sudo rm -rf "$HOME/server_files/source_code/build"
 
 # 2. Copy source files (if needed)
 sudo cp -r "$HOME/server_files/git/source_code/." "$HOME/server_files/source_code/"
