@@ -119,6 +119,9 @@ echo "check that your port is open on device and on modem 3306 3724 3700 8085*"
 GameType = 16
 StartPlayerMoney = 100000
 StartPlayerLevel = 80
+PreventAFKLogout = 2
+-- AFK : https://youtu.be/DwJ6OfPophw?t=2821
+-- Some cool value to change: https://youtu.be/DwJ6OfPophw?t=2579
 
 Copy this script in:   
 sudo nano "$HOME/server_files/build/core_files/bin/lua_scripts/HardCore.lua"  
@@ -223,3 +226,8 @@ set realmlist YOUR_SERVER_IP
 set realmlist 192.168.1.88    
 
 ```
+
+
+--------------
+
+[Add Bots in your server ?](https://youtu.be/DwJ6OfPophw?t=517)
