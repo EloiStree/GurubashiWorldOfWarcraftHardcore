@@ -1,6 +1,13 @@
+> **Heads up:** It’s my first server, and I’m still new to Linux, so I didn’t pay a lot of attention to security. I’m just a beginner working through a tutorial to remind myself how I did it last time.
+
+---------------
+
+
 Step by step tutorial in French.  
-User Youtube Audio AI or subtitle for other language:  
-Version Long: https://youtu.be/c82OrEq6iEs  
+User Youtube Audio AI or subtitle for other language:    
+Step by step: 
+- In 13 minutes: https://youtu.be/xj4TxTvAHSo  
+- In 2 hours: https://youtu.be/c82OrEq6iEs    
 
 Disable Log In on the PC
 ```
