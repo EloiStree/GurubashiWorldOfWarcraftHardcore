@@ -23,9 +23,9 @@
 > But by reporting some of them, Blizzard can track back many of them, observe, and remove them.  
 > I won’t lie, I started creating bots because:    
 > - Killing 30,000 mobs or fishing for a week straight for a mount is inhuman.    
-> – I don’t have $80 to boost a character or three weeks of my life to kill boars (with the auto-leveling).  
-> - My favorite sport on public servers is to make white-hat bots run around the world to find bots to report them all.  
-> *So if you bot on public servers, at least try to be a good bot for the community.*  
+> – I don’t have $80 to boost a character or three weeks of my life to kill boars (with the auto-leveling).    
+> - My favorite sport on public servers is to make white-hat bots run around the world to find bots to report them all.    
+> *So if you bot on public servers, at least try to be a good bot for the community.*    
 
 
 ---
