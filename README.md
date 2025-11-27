@@ -1,4 +1,4 @@
- [Install a server ->](https://github.com/EloiStree/GurubashiWorldOfWarcraftHardcore/tree/main/Install) - [Connect to a server](https://github.com/EloiStree/GurubashiWorldOfWarcraftHardcore/tree/main/Install/Client)  
+ [Install a server 📖](https://github.com/EloiStree/GurubashiWorldOfWarcraftHardcore/tree/main/Install) - [Connect to a server 📖](https://github.com/EloiStree/GurubashiWorldOfWarcraftHardcore/tree/main/Install/Client)  
 
 ------------
 
