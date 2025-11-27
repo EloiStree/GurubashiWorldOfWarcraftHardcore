@@ -3,29 +3,29 @@
 
 [<img width="979" height="223" alt="image" src="https://github.com/user-attachments/assets/15d13516-9619-467d-8d0b-06d5c7b159c1" />](https://wowpedia.fandom.com/wiki/Gurubashi_Arena)
 
-> **Warning 1:** Private servers are against the World of Warcraft Terms of Service.
-> You should have an active monthly subscription to the official game to participate in this server mode.
-> This is not, and should not be, a substitute for the official release.
-> This project is a fan-made mode for educational purposes.
-> *We are not against Blizzard; we just want to have fun in the world we were born in.*
+> **Warning 1:** Private servers are against the World of Warcraft Terms of Service.  
+> You please have an active monthly subscription to the official game to participate in those servers mode.  
+> This is not, and should not be, a substitute for the official release.  
+> This project is a fan-made mode for educational purposes.  
+> *We are not against Blizzard; we just want to have fun in the world we were born in.*  
 
 ---
 
-> **Warning 2:** All bots on World of Warcraft public servers should be banned, hunted, and reported.
-> Outside of public servers, I truly believe in the educational purpose of coding your way through the game.
-> Servers dedicated to learning to code should exist, similar to **Minecraft Education**.
-> By creating bots, you learn how to fight them and how to make their lives harder.
-> *The Gurubashi servers are here for that: to learn to code while having fun.*
+> **Warning 2:** All bots on World of Warcraft public servers should be banned, hunted, and reported.  
+> But outside of public servers, and bots hunting , I truly believe in the educational purpose of coding your way through the game.  
+> Servers dedicated to learning to code should exist, similar to **Minecraft Education**.  
+> By creating bots, you learn how to fight them and how to make their lives harder.   
+> *The Gurubashi servers are here for that: to learn to code while having fun.*  
 
 ---
 
-> **Note:** We fight an unequal battle with bots because they don’t sleep and they have numbers.
-> But by reporting some of them, Blizzard can track back many of them, observe, and remove them.
-> I won’t lie, I started creating bots because:
-> – Killing 30,000 mobs or fishing for a week straight for a mount is inhuman.
-> – I don’t have $80 to boost a character or three weeks of my life to kill boars (with the auto-leveling).
-> My favorite sport on public servers is to make white-hat bots run around the world to find them and report them all.
-> *So if you bot on public servers, at least try to be a good bot for the community.*
+> **Note:** We fight an unequal battle with bots because they don’t sleep and they have numbers.   
+> But by reporting some of them, Blizzard can track back many of them, observe, and remove them.  
+> I won’t lie, I started creating bots because:    
+> - Killing 30,000 mobs or fishing for a week straight for a mount is inhuman.    
+> – I don’t have $80 to boost a character or three weeks of my life to kill boars (with the auto-leveling).  
+> - My favorite sport on public servers is to make white-hat bots run around the world to find bots to report them all.  
+> *So if you bot on public servers, at least try to be a good bot for the community.*  
 
 
 ---
