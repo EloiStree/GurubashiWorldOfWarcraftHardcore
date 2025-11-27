@@ -34,7 +34,7 @@
 
 * If you’re here to learn what a `loop` and a `list` are, you’re in the right place.
 * If you want to battle as a human against code and AI in mini-challenge tournaments, you’re in the right place.
-* If you want to learn how to create a home server and practice coding by fighting your friends in LAN PvP, you’re in the right place.
+* If you want to learn how to create a home server and practice coding by fighting your friends in LAN PvP Battle, you’re in the right place.
 
 ---
 
