@@ -93,4 +93,8 @@ Eloi
 -----------------
 ------------------
 
-Reminder: [Wow Classic](https://youtu.be/BHu5fTna8V4?t=1049)  
+Reminder: [Wow Classic](https://youtu.be/BHu5fTna8V4?t=1049)  [Warcraft 3](https://youtu.be/Grz6_-vZTnM)
+
+
+
+
